@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="container">
+        <section class="catalog">
+        <div class="container">
+            <ul class="catalog__tabs">
+                <li class="catalog__tab catalog__tab_active elf" onclick="changeItems('elf')"><div>Ельф Бар</div></li>
+                <li class="catalog__tab pods" onclick="changeItems('pods')"><div>Под</div></li>
+                <li class="catalog__tab liquid" onclick="changeItems('liquid')"><div>Жижка</div></li>
+                <li class="catalog__tab cartrydz" onclick="changeItems('cartrydz')"><div>Картридж</div></li>
+            </ul>
+
+            <div class="catalog__content catalog__content_active catalog__elf">
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__price">400 грн</div> -->
+                                
+                            </div>
+                            <div class="counter-container" data-counter="1">
+                                <label for="">Sell</label>
+                                <input class="sell-price" value="100"></input>
+                                <hr>
+                                <label for="">Buy</label>
+                                <input class="buy-price" value="1000"></input>
+                                <hr>
+                                <div class="buy-price" style="display: none;">300</div>
+                                <div class="sell-price" style="display: none;">400</div>
+                                <button class="decrement">-</button>
+                                <input class="counter" type="number"></input>
+                                <button class="increment">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 3000
+                            </div>
+                            <div class="catalog-item__prices">
+                                <div class="catalog-item__price">500 грн</div>
+                                
+                            </div>
+                            <div class="counter-container" data-counter="2">
+                                <div class="buy-price" style="display: none;">400</div>
+                                <div class="sell-price" style="display: none;">500</div>
+                                <button class="decrement">-</button>
+                                <input class="counter" type="number"></input>
+                                <button class="increment">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                            <div class="catalog-item__prices">
+                                <div class="catalog-item__price">200 грн</div>
+                                
+                            </div>
+                            <div class="counter-container" data-counter="3">
+                                <div class="buy-price" style="display: none;">100</div>
+                                <div class="sell-price" style="display: none;">200</div>
+                                <button class="decrement">-</button>
+                                <input class="counter" type="number"></input>
+                                <button class="increment">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <h1 class="earned-money"></h1>
+            <h1 class="spent-money"></h1>
+            <h1 class="diff"></h1>
+            <button id="scrollDownButton">\/</button>
+            <button id="scrollUpButton">/\</button>
+
+            <!-- <div class="catalog__content catalog__pods">
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__content catalog__liquid">
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__content catalog__cartrydz">
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Elfbar</div>
+                            <div class="catalog-item__descr">Elfbar 2000
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__price">400 грн</div>
+                        </div>
+                        <div class="counter-container">
+                            <button class="decrement">-</button>
+                            <span class="counter">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+                
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
