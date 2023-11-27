@@ -28,16 +28,15 @@ document.querySelectorAll('.counter-container').forEach(container => {
     const incrementButton = container.querySelector('.increment');
     const counterId = container.dataset.counter;
 
-    const sellPrice = container.querySelector('.sell-price').innerHTML;
-    const buyPrice = container.querySelector('.buy-price').innerHTML;
-    
-
-    
     // Initialize counter value
     counterElement.value = localStorage.getItem(`counter_${counterId}`) || 0;
+    const sellPrice = parseInt(localStorage.getItem(`sellPrice_${counterId}`)) || 0;
+    const buyPrice = parseInt(localStorage.getItem(`buyPrice_${counterId}`)) || 0;
 
     EarnedMoney += sellPrice * counterElement.value;
     SpentMoney += buyPrice * counterElement.value;
+    
+    
     
     decrementButton.addEventListener('click', () => {
         const currentValue = parseInt(counterElement.value);

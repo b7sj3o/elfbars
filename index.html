@@ -50,15 +50,21 @@
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
                             <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 3000
+                            <div class="catalog-item__descr">Elfbar 2000
                             </div>
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__price">500 грн</div>
+                                <!-- <div class="catalog-item__price">400 грн</div> -->
                                 
                             </div>
-                            <div class="counter-container" data-counter="2">
-                                <div class="buy-price" style="display: none;">400</div>
-                                <div class="sell-price" style="display: none;">500</div>
+                            <div class="counter-container" data-counter="1">
+                                <label for="">Sell</label>
+                                <input class="sell-price" value="100"></input>
+                                <hr>
+                                <label for="">Buy</label>
+                                <input class="buy-price" value="1000"></input>
+                                <hr>
+                                <div class="buy-price" style="display: none;">300</div>
+                                <div class="sell-price" style="display: none;">400</div>
                                 <button class="decrement">-</button>
                                 <input class="counter" type="number"></input>
                                 <button class="increment">+</button>
@@ -74,12 +80,18 @@
                             <div class="catalog-item__descr">Elfbar 2000
                             </div>
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__price">200 грн</div>
+                                <!-- <div class="catalog-item__price">400 грн</div> -->
                                 
                             </div>
-                            <div class="counter-container" data-counter="3">
-                                <div class="buy-price" style="display: none;">100</div>
-                                <div class="sell-price" style="display: none;">200</div>
+                            <div class="counter-container" data-counter="1">
+                                <label for="">Sell</label>
+                                <input class="sell-price" value="100"></input>
+                                <hr>
+                                <label for="">Buy</label>
+                                <input class="buy-price" value="1000"></input>
+                                <hr>
+                                <div class="buy-price" style="display: none;">300</div>
+                                <div class="sell-price" style="display: none;">400</div>
                                 <button class="decrement">-</button>
                                 <input class="counter" type="number"></input>
                                 <button class="increment">+</button>
@@ -87,14 +99,7 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-            <h1 class="earned-money"></h1>
-            <h1 class="spent-money"></h1>
-            <h1 class="diff"></h1>
-            <button id="scrollDownButton">\/</button>
-            <button id="scrollUpButton">/\</button>
-
             <!-- <div class="catalog__content catalog__pods">
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
@@ -321,8 +326,17 @@
                     </div>
                 </div>
             </div> -->
-                
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="menu">
+                <div class="menu__wrapper">
+                    <h1 class="earned-money"></h1>
+                    
+                    <h1 class="spent-money"></h1>
+                    
+                    <h1 class="diff"></h1>
+                </div>
+            </div>
+            <button id="scrollDownButton"><img src="img/down-arrow.png" alt=""></button>
+            <button id="scrollUpButton"><img src="img/up-arrow.png" alt=""></button>
         </div>
     </section>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
