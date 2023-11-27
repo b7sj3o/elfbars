@@ -4,341 +4,1056 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <div class="container">
         <section class="catalog">
-        <div class="container">
-            <ul class="catalog__tabs">
-                <li class="catalog__tab catalog__tab_active elf" onclick="changeItems('elf')"><div>Ельф Бар</div></li>
-                <li class="catalog__tab pods" onclick="changeItems('pods')"><div>Под</div></li>
-                <li class="catalog__tab liquid" onclick="changeItems('liquid')"><div>Жижка</div></li>
-                <li class="catalog__tab cartrydz" onclick="changeItems('cartrydz')"><div>Картридж</div></li>
-            </ul>
+            <div class="container">
+                <ul class="catalog__tabs">
+                    <li class="catalog__tab catalog__tab_active elf" onclick="changeItems('elf')"><div>Ельф Бар</div></li>
+                    <li class="catalog__tab pods" onclick="changeItems('pods')"><div>Под</div></li>
+                    <li class="catalog__tab liquid" onclick="changeItems('liquid')"><div>Жижка</div></li>
+                    <li class="catalog__tab cartrydz" onclick="changeItems('cartrydz')"><div>Картридж</div></li>
+                </ul>
 
-            <div class="catalog__content catalog__content_active catalog__elf">
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                            <div class="catalog-item__prices">
-                                <!-- <div class="catalog-item__price">400 грн</div> -->
+                <div class="catalog__content catalog__content_active catalog__elf">
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/odnorazka/wotofo.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Wotofo 1500</div>
                                 
-                            </div>
-                            <div class="counter-container" data-counter="1">
-                                <label for="">Sell</label>
-                                <input class="sell-price" value="100"></input>
-                                <hr>
-                                <label for="">Buy</label>
-                                <input class="buy-price" value="1000"></input>
-                                <hr>
-                                <div class="buy-price" style="display: none;">300</div>
-                                <div class="sell-price" style="display: none;">400</div>
-                                <button class="decrement">-</button>
-                                <input class="counter" type="number"></input>
-                                <button class="increment">+</button>
+                                <div class="counter-container" data-counter="1">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                            <div class="catalog-item__prices">
-                                <!-- <div class="catalog-item__price">400 грн</div> -->
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/odnorazka/elfbar1500.png" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">ElfBar 1500</div>
                                 
-                            </div>
-                            <div class="counter-container" data-counter="1">
-                                <label for="">Sell</label>
-                                <input class="sell-price" value="100"></input>
-                                <hr>
-                                <label for="">Buy</label>
-                                <input class="buy-price" value="1000"></input>
-                                <hr>
-                                <div class="buy-price" style="display: none;">300</div>
-                                <div class="sell-price" style="display: none;">400</div>
-                                <button class="decrement">-</button>
-                                <input class="counter" type="number"></input>
-                                <button class="increment">+</button>
+                                <div class="counter-container" data-counter="2">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                            <div class="catalog-item__prices">
-                                <!-- <div class="catalog-item__price">400 грн</div> -->
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/odnorazka/elfbar2000.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">ElfBar 2000</div>
                                 
+                                <div class="counter-container" data-counter="3">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="counter-container" data-counter="1">
-                                <label for="">Sell</label>
-                                <input class="sell-price" value="100"></input>
-                                <hr>
-                                <label for="">Buy</label>
-                                <input class="buy-price" value="1000"></input>
-                                <hr>
-                                <div class="buy-price" style="display: none;">300</div>
-                                <div class="sell-price" style="display: none;">400</div>
-                                <button class="decrement">-</button>
-                                <input class="counter" type="number"></input>
-                                <button class="increment">+</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/odnorazka/elfbar4000.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">ElfBar 4000</div>
+                                
+                                <div class="counter-container" data-counter="4">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/odnorazka/elfbar5000TE.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">ElfBar TE 5000</div>
+                                
+                                <div class="counter-container" data-counter="5">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/odnorazka/elfbar5000u.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">ElfBar 5000 ultra</div>
+                                
+                                <div class="counter-container" data-counter="6">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/odnorazka/elfbar7000.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">ElfBar 7000</div>
+                                
+                                <div class="counter-container" data-counter="7">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__content catalog__pods">
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/rf350.jpeg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Elf Bar RF350</div>
+                                
+                                <div class="counter-container" data-counter="8">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/oxva.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Oxva Xlim Crystal</div>
+                                
+                                <div class="counter-container" data-counter="9">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/ursa-nano-s.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Lost Vape Ursa Nano S</div>
+                                
+                                <div class="counter-container" data-counter="10">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/ursa-nano-art.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Lost Vape Ursa Nano Art </div>
+                                
+                                <div class="counter-container" data-counter="11">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/ursa-nano.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Lost Vape Ursa Nano</div>
+                                
+                                <div class="counter-container" data-counter="12">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/smok-novo-2x.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Smok Novo 2x</div>
+                                
+                                <div class="counter-container" data-counter="13">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/smok-novo-4-mini.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Smok Novo 4 mini</div>
+                                
+                                <div class="counter-container" data-counter="14">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/Vaporesso-zero-s.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Vaporesso Zero S </div>
+                                
+                                <div class="counter-container" data-counter="15">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/Vaporesso-xros-3-mini.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Vaporesso Xros 3 mini</div>
+                                
+                                <div class="counter-container" data-counter="16">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/Vaporesso-xros-3.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Vaporesso Xros 3</div>
+                                
+                                <div class="counter-container" data-counter="17">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/Voopoo-doriq-q.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Voopoo Doric Q</div>
+                                
+                                <div class="counter-container" data-counter="18">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/Voopoo-vinci-q.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Voopoo Vinci Q</div>
+                                
+                                <div class="counter-container" data-counter="19">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/Voopoo-vinci-SE.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Voopoo Vinci SE</div>
+                                
+                                <div class="counter-container" data-counter="20">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/Voopoo-vinci-royal.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Voopoo Vinci Royal</div>
+                                
+                                <div class="counter-container" data-counter="21">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/pods/Voopoo-vinci-3.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Voopoo Vinci 3</div>
+                                
+                                <div class="counter-container" data-counter="22">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__content catalog__liquid">
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/chaser-10-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Chaser 10ml / 50mg</div>
+                                
+                                <div class="counter-container" data-counter="23">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/chaser-10-60.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Chaser 10ml / 60mg</div>
+                                
+                                <div class="counter-container" data-counter="24">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/chaser-11-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Chaser 11ml / 50mg</div>
+                                
+                                <div class="counter-container" data-counter="25">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/chaser-11-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Chaser 11ml / 60mg</div>
+                                
+                                <div class="counter-container" data-counter="26">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/chaser-15-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Chaser 15ml / 50mg</div>
+                                
+                                <div class="counter-container" data-counter="27">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/chaser-15-black-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Chaser 15ml BLACK</div>
+                                
+                                <div class="counter-container" data-counter="28">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/chaser-30-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Chaser 30ml / 50mg</div>
+                                
+                                <div class="counter-container" data-counter="29">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/chaser-30-black-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Chaser 30ml BLACK / 50mg</div>
+                                
+                                <div class="counter-container" data-counter="30">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/chaser-30-lux-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Chaser 30ml LUX / 50mg</div>
+                                
+                                <div class="counter-container" data-counter="31">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/hype-10-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Hype 10ml / 50mg</div>
+                                
+                                <div class="counter-container" data-counter="32">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/hype-10-59.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Hype 10ml / 59mg</div>
+                                
+                                <div class="counter-container" data-counter="33">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/hype-30-50.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Hype 30ml / 50mg</div>
+                                
+                                <div class="counter-container" data-counter="34">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/Elfliq-10.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Elfliq 10ml</div>
+                                
+                                <div class="counter-container" data-counter="35">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/liquid/Elfliq-30.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Elfliq 30ml</div>
+                                
+                                <div class="counter-container" data-counter="36">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__content catalog__cartrydz">
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/rf350_mate500.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Elf Bar Rf350 & Mate 500</div>
+                                
+                                <div class="counter-container" data-counter="37">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/vaporesso-xros.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Vaporesso Xros</div>
+                                
+                                <div class="counter-container" data-counter="38">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/vaporesso-zero-s.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Vaporesso Zero S</div>
+                                
+                                <div class="counter-container" data-counter="39">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/vaporesso-luxe-q.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Vaporesso Luxe Q</div>
+                                
+                                <div class="counter-container" data-counter="40">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/lost-vape-ursa.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Lost Vape Ursa</div>
+                                
+                                <div class="counter-container" data-counter="41">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/voopoo-vinci.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Voopoo Vinci</div>
+                                
+                                <div class="counter-container" data-counter="42">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/oxva-xlim.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Oxva Xlim</div>
+                                
+                                <div class="counter-container" data-counter="43">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/smok-novo.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Smok Novo 2, 2s, 3</div>
+                                
+                                <div class="counter-container" data-counter="44">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/smok-novo-4-mini.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Smok Novo 4 mini (empty)</div>
+                                
+                                <div class="counter-container" data-counter="45">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="img/cartrydz/lp1-smok.jpg" alt="pulsometr" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Випарник Lp1 (для Smok)</div>
+                                
+                                <div class="counter-container" data-counter="46">
+                                    <label for="">Закупочна ціна</label>
+                                    <input class="buy-price form-control"></input>
+                                    <hr>
+                                    <label for="">Продажна ціна</label>
+                                    <input class="sell-price form-control"></input>
+                                    <hr>
+                                    <div class="inputs-pm">
+                                        <button class="decrement">-</button>
+                                        <input class="counter form-control" type="number"></input>
+                                        <button class="increment">+</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="catalog__content catalog__pods">
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="catalog__content catalog__liquid">
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="catalog__content catalog__cartrydz">
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/elfbar.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Elfbar</div>
-                            <div class="catalog-item__descr">Elfbar 2000
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__price">400 грн</div>
-                        </div>
-                        <div class="counter-container">
-                            <button class="decrement">-</button>
-                            <span class="counter">0</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <div class="menu">
-                <div class="menu__wrapper">
-                    <h1 class="earned-money"></h1>
-                    
-                    <h1 class="spent-money"></h1>
-                    
-                    <h1 class="diff"></h1>
-                </div>
-            </div>
-            <button id="scrollDownButton"><img src="img/down-arrow.png" alt=""></button>
-            <button id="scrollUpButton"><img src="img/up-arrow.png" alt=""></button>
+     </section>
+     <div class="menu">
+        <div class="menu__wrapper">
+            <h1 class="earned-money"></h1>
+            <h1 class="spent-money"></h1>
+            <h1 class="diff"></h1>
+            <h1 class="sold-amount"></h1>
         </div>
-    </section>
+    </div>
+    <button class="btn btn-primary w-100 mb-5" onclick="reloadData()">Оновити дані</button>
+    <button class="btn btn-primary w-100 mb-5" onclick="clearData()">Очистити все</button>
+    <button id="scrollDownButton"><img src="img/else/down-arrow.png" alt=""></button>
+    <button id="scrollUpButton"><img src="img/else/up-arrow.png" alt=""></button>
+    </div>  
+   
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
     <script src="js/script.js"></script>
