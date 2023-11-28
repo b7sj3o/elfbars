@@ -70,6 +70,10 @@ document.querySelectorAll('.counter-container').forEach(container => {
         console.log(buyPriceInput.value)
         localStorage.setItem(`buyPrice_${counterId}`, buyPriceInput.value)
     });
+    
+    counterElement.addEventListener('change', () => {
+        localStorage.setItem(`counter_${counterId}`, counterElement.value)
+    });
 });
 
 moneyElement.innerHTML = `Загальний оборот: ${EarnedMoney}₴`
