@@ -109,3 +109,10 @@ function clearData() {
 function reloadData() {
     location.reload();
 }
+
+function clearAmount() {
+    document.querySelectorAll('.counter-container').forEach(container => {
+        localStorage.removeItem(`counter_${container.dataset.counter}`)
+    })
+    location.reload();
+}

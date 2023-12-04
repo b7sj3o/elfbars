@@ -38,9 +38,9 @@ h6 {
     padding: 0 15px;
     box-sizing: content-box;
 }
-body{
-    background-color: rgb(138, 52, 138);
-    overflow-x:hidden;
+body {
+    background-color: #c4a762cc;
+    overflow-x: hidden;
 }
 
 .catalog {
@@ -59,7 +59,7 @@ body{
         width: 220px;
         height: 50px;
         border: 2px solid #d0d0d0;
-        color: #6b6b6b;
+        color: #000000;
         font-size: 18px;
         font-weight: 400;
         text-transform: uppercase;
@@ -77,7 +77,7 @@ body{
             transform: skewX(25deg);
         }
         &_active {
-            color: #fff;
+            color: #000000;
             background-color: yellow;
             border: none;
         }
@@ -156,13 +156,14 @@ button {
     margin: 0 10px;
 }
 
-#scrollDownButton, #scrollUpButton {
+#scrollDownButton,
+#scrollUpButton {
     padding: 15px;
     background-color: #555555;
     position: fixed;
     right: 30px;
     bottom: 30px;
-    img{
+    img {
         width: 30px;
     }
 }
@@ -170,11 +171,11 @@ button {
 #scrollUpButton {
     bottom: 100px;
 }
-.menu{
+.menu {
     display: flex;
     justify-content: center;
     margin: 30px 0;
-    &__wrapper{
+    &__wrapper {
         display: block;
         justify-content: space-evenly;
         align-items: center;
@@ -189,23 +190,35 @@ button {
                 border-bottom: none;
             }
         }
-        
-        
     }
 }
-
 
 .inputs-pm {
     display: flex;
     align-items: center;
 
-    .decrement, .increment {
+    .decrement,
+    .increment {
         background-color: rgb(165, 159, 159);
         width: 35px;
         height: 35px;
         display: flex;
         align-items: center;
         margin: 0 5px;
+    }
+}
+
+.catalog-items-opt {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+    border: 1px solid white;
+    padding: 15px 5px;
+
+    &__item {
+        width: 33%;
     }
 }
 
