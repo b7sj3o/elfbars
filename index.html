@@ -1044,17 +1044,17 @@
                         <div class="counter-container catalog-items-opt w-100">
                             <div class="catalog-item-opt">
                                 <label for="">Закупочна ціна</label>
-                                <input class="buy-price form-control"></input>
+                                <input type="number" class="buy-price form-control" id="buy-price"></input>
                             </div>
                             <div class="catalog-item-opt">
                                 <label for="">Продажна ціна</label>
-                                <input class="sell-price form-control"></input>
+                                <input type="number" class="sell-price form-control" id="sell-price"></input>
                             </div>
                             <div class="catalog-item-opt">
                                 <label for="">Кількість</label>
                                 <div class="inputs-pm">
                                     <button class="decrement">-</button>
-                                    <input class="counter form-control" type="number"></input>
+                                    <input type="number" class="counter form-control" type="number" id="counter"></input>
                                     <button class="increment">+</button>
                                 </div>
                             </div>
@@ -1066,7 +1066,7 @@
                 </div>
             </div>
      </section>
-     <div class="menu">
+     <div class="menu" id="menu">
         <div class="menu__wrapper">
             <h1 class="earned-money"></h1>
             <h1 class="spent-money"></h1>
@@ -1084,5 +1084,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/else.js"> </script>
 </body>
 </html>
