@@ -1,26 +1,8 @@
-let allTypes = document.querySelectorAll('.catalog__content')
-let allTabs = document.querySelectorAll('.catalog__tab');
-function changeItems(kind) {
-    allTypes.forEach(product => {
-        if (product.className.includes(kind)) {
-            product.classList.add('catalog__content_active')
-        } else {
-            product.classList.remove('catalog__content_active')
-        }
-    })
-    allTabs.forEach(tab => {
-        if (tab.className.includes(kind)) {
-            tab.classList.add('catalog__tab_active')
-        } else {
-            tab.classList.remove('catalog__tab_active')
-        }
-    })
-}
-
 let moneyElement = document.querySelector('.earned-money');
 let spentElement = document.querySelector('.spent-money');
 let difference = document.querySelector('.diff');
 let soldAmountTag = document.querySelector('.sold-amount');
+let saveDataBtn = document.querySelectorAll('.save_data');
 
 let EarnedMoney = 0;
 let SpentMoney = 0;
@@ -54,26 +36,21 @@ document.querySelectorAll('.counter-container').forEach(container => {
         }
     });
 
-    // incrementButton.addEventListener('click', () => {
-    //     const currentValue = parseInt(counterElement.value);
-    //     counterElement.value = currentValue + 1;
-    //     localStorage.setItem(`counter_${counterId}`, currentValue + 1);
-    // });
+    incrementButton.addEventListener('click', () => {
+        const currentValue = parseInt(counterElement.value);
+        counterElement.value = currentValue + 1;
+        localStorage.setItem(`counter_${counterId}`, currentValue + 1);
+    });
 
-    // sellPriceInput.addEventListener('change', () => {
-    //     console.log(sellPriceInput.value)
-    //     localStorage.setItem(`sellPrice_${counterId}`, sellPriceInput.value)
-        
-    // });
-
-    // buyPriceInput.addEventListener('change', () => {
-    //     console.log(buyPriceInput.value)
-    //     localStorage.setItem(`buyPrice_${counterId}`, buyPriceInput.value)
-    // });
+    saveDataBtn.forEach(btn => {
+        btn.addEventListener('click', function() {
+            localStorage.setItem(`sellPrice_${counterId}`, sellPriceInput.value)
+            localStorage.setItem(`buyPrice_${counterId}`, buyPriceInput.value)
+            localStorage.setItem(`counter_${counterId}`, counterElement.value)
+            location.reload()
+        });
+    })
     
-    // counterElement.addEventListener('change', () => {
-    //     localStorage.setItem(`counter_${counterId}`, counterElement.value)
-    // });
 });
 
 moneyElement.innerHTML = `Загальний оборот: ${EarnedMoney}₴`

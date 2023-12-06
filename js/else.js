@@ -10,28 +10,27 @@ document.addEventListener("DOMContentLoaded", () => {
     function render(){
         moneyData.forEach((data, index) => {
             menu.innerHTML += `
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <div class="counter-container" data-counter="${index+46}">
+                    <div class="catalog__opt">
+                        <div class="counter-container catalog-items-opt w-100" data-counter="${index+47}">
+                            <div class="catalog-item-opt">
                                 <label for="">Закупочна ціна</label>
                                 <input class="buy-price form-control" value="${data.buy}"></input>
-                                <hr>
+                            </div>
+                            <div class="catalog-item-opt">
                                 <label for="">Продажна ціна</label>
                                 <input class="sell-price form-control" value="${data.sell}"></input>
-                                <hr>
+                            </div>
+                            <div class="catalog-item-opt">
+                                <label for="" style="margin-left: 45px;">Кількість</label>
                                 <div class="inputs-pm">
                                     <button class="decrement">-</button>
                                     <input class="counter form-control" type="number" value="${data.counter}"></input>
                                     <button class="increment">+</button>
                                 </div>
                             </div>
+                            
                         </div>
-                    </div>
-                </div>`
-                // localStorage.setItem(`buyPrice_${index + 46}`, buyInputValue.value) 
-                // localStorage.setItem(`sellPrice_${index + 46}`, sellInputValue.value) 
-                // localStorage.setItem(`counter_${index + 46}`, counterValue.value) 
+                    </div><hr>`
         });
     }   
    
