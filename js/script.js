@@ -1,5 +1,5 @@
 let allTypes = document.querySelectorAll('.catalog__content')
-let allTabs = document.querySelectorAll('.catalog__tab')
+let allTabs = document.querySelectorAll('.catalog__tab');
 function changeItems(kind) {
     allTypes.forEach(product => {
         if (product.className.includes(kind)) {

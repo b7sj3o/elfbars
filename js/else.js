@@ -3,20 +3,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const sellInputValue = document.getElementById("sell-price").value;
     const counterValue = document.getElementById("counter").value;
     const buttonFormSubmit = document.querySelector("#opt-btn");
-    const menu = document.getElementById("menu");
+    const menu = document.querySelector(".catalog__opt");
     const moneyData = JSON.parse(localStorage.getItem("moneyData")) || [];
 
  
     function render(){
-        menu.innerHTML = "";
         moneyData.forEach((data, index) => {
             menu.innerHTML += `
-                <div class="menu__wrapper">
-                    <h1 class="earned-money">Загальний оборот: ${data.buy}</h1>
-                    <h1 class="spent-money">Чистий дохід: ${data.sell}</h1>
-                    <h1 class="diff">Різниця: ${data.counter}</h1>
-                    <h1 class="sold-amount">Продано: ${index + 1}</h1>
-                </div>`;
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <div class="counter-container" data-counter="${index+46}">
+                                <label for="">Закупочна ціна</label>
+                                <input class="buy-price form-control" value="${data.buy}"></input>
+                                <hr>
+                                <label for="">Продажна ціна</label>
+                                <input class="sell-price form-control" value="${data.sell}"></input>
+                                <hr>
+                                <div class="inputs-pm">
+                                    <button class="decrement">-</button>
+                                    <input class="counter form-control" type="number" value="${data.counter}"></input>
+                                    <button class="increment">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
         });
     }   
    
