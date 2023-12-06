@@ -54,26 +54,26 @@ document.querySelectorAll('.counter-container').forEach(container => {
         }
     });
 
-    incrementButton.addEventListener('click', () => {
-        const currentValue = parseInt(counterElement.value);
-        counterElement.value = currentValue + 1;
-        localStorage.setItem(`counter_${counterId}`, currentValue + 1);
-    });
+    // incrementButton.addEventListener('click', () => {
+    //     const currentValue = parseInt(counterElement.value);
+    //     counterElement.value = currentValue + 1;
+    //     localStorage.setItem(`counter_${counterId}`, currentValue + 1);
+    // });
 
-    sellPriceInput.addEventListener('change', () => {
-        console.log(sellPriceInput.value)
-        localStorage.setItem(`sellPrice_${counterId}`, sellPriceInput.value)
+    // sellPriceInput.addEventListener('change', () => {
+    //     console.log(sellPriceInput.value)
+    //     localStorage.setItem(`sellPrice_${counterId}`, sellPriceInput.value)
         
-    });
+    // });
 
-    buyPriceInput.addEventListener('change', () => {
-        console.log(buyPriceInput.value)
-        localStorage.setItem(`buyPrice_${counterId}`, buyPriceInput.value)
-    });
+    // buyPriceInput.addEventListener('change', () => {
+    //     console.log(buyPriceInput.value)
+    //     localStorage.setItem(`buyPrice_${counterId}`, buyPriceInput.value)
+    // });
     
-    counterElement.addEventListener('change', () => {
-        localStorage.setItem(`counter_${counterId}`, counterElement.value)
-    });
+    // counterElement.addEventListener('change', () => {
+    //     localStorage.setItem(`counter_${counterId}`, counterElement.value)
+    // });
 });
 
 moneyElement.innerHTML = `Загальний оборот: ${EarnedMoney}₴`

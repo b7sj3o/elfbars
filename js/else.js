@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const buyInputValue = document.getElementById("buy-price").value;
-    const sellInputValue = document.getElementById("sell-price").value;
-    const counterValue = document.getElementById("counter").value;
+    const buyInputValue = document.getElementById("buy-price");
+    const sellInputValue = document.getElementById("sell-price");
+    const counterValue = document.getElementById("counter");
     const buttonFormSubmit = document.querySelector("#opt-btn");
-    const menu = document.querySelector(".catalog__opt");
+    const menu = document.getElementById("dopMenu");
     const moneyData = JSON.parse(localStorage.getItem("moneyData")) || [];
 
  
@@ -29,19 +29,23 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                     </div>
                 </div>`
+                // localStorage.setItem(`buyPrice_${index + 46}`, buyInputValue.value) 
+                // localStorage.setItem(`sellPrice_${index + 46}`, sellInputValue.value) 
+                // localStorage.setItem(`counter_${index + 46}`, counterValue.value) 
         });
     }   
    
 
     buttonFormSubmit.onclick = (e) => {
         e.preventDefault();
-        (buyInputValue == "" || sellInputValue == "" || counterValue == "")
+        (buyInputValue.value === "" || sellInputValue.value === "" || counterValue.value === "")
             ? console.log("no needed data")
             : (() => {
+                console.log(buyInputValue.value)
                 const moneyObject = {
-                    buy: buyInputValue,
-                    sell: sellInputValue,
-                    counter: counterValue
+                    buy: buyInputValue.value,
+                    sell: sellInputValue.value,
+                    counter: counterValue.value
                 };
                 moneyData.push(moneyObject);
                 localStorage.setItem("moneyData", JSON.stringify(moneyData));
